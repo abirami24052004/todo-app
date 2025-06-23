@@ -37,6 +37,10 @@ app.use(passport.session());
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/tasks', require('./routes/tasks'));
+app.get("/", (req, res) => {
+  res.send("API is running ✅");
+});
+
 
 // MongoDB connection
 mongoose.connect(process.env.MONGODB_URI)
@@ -57,3 +61,4 @@ app.listen(PORT, () => {
   console.log('- Facebook:', !!(process.env.FACEBOOK_APP_ID && process.env.FACEBOOK_APP_SECRET));
   console.log('- GitHub:', !!(process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET));
 });
+
