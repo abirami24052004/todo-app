@@ -6,22 +6,7 @@ import { authAPI, tasksAPI } from './services/api';
 
 
 
-const AuthSuccessHandler = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
 
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const token = params.get("token");
-
-    if (token) {
-      localStorage.setItem("token", token);
-      navigate("/dashboard"); // redirect to dashboard after login
-    }
-  }, [location, navigate]);
-
-  return <p>Logging you in...</p>;
-};
 
 
 
