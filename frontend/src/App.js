@@ -17,24 +17,9 @@ const Login = ({ onLogin }) => {
       window.history.replaceState({}, document.title, window.location.pathname);
     }
   }, []);
-  <Route path="/auth/success" element={<AuthSuccessHandler />} />
+  
 
-  const AuthSuccessHandler = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
 
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const token = params.get("token");
-
-    if (token) {
-      localStorage.setItem("token", token);
-      navigate("/dashboard");
-    }
-  }, [location, navigate]);
-
-  return <p>Logging you in...</p>;
-};
 
 
   const checkUser = async () => {
