@@ -19,7 +19,8 @@ router.get('/google/callback',
       process.env.JWT_SECRET,
       { expiresIn: '7d' }
     );
-    res.redirect(`${process.env.CLIENT_URL}/auth/success?token=${token}`);
+    res.redirect(`https://todo-app-2-frontend.onrender.com/auth/success?token=${token}`);
+
   }
 );
 
@@ -38,7 +39,8 @@ router.get('/facebook/callback',
       process.env.JWT_SECRET,
       { expiresIn: '7d' }
     );
-    res.redirect(`${process.env.CLIENT_URL}/auth/success?token=${token}`);
+res.redirect(`https://todo-app-2-frontend.onrender.com/auth/success?token=${token}`);
+
   }
 );
 
@@ -57,7 +59,8 @@ router.get('/github/callback',
       process.env.JWT_SECRET,
       { expiresIn: '7d' }
     );
-    res.redirect(`${process.env.CLIENT_URL}/auth/success?token=${token}`);
+    res.redirect(`https://todo-app-2-frontend.onrender.com/auth/success?token=${token}`);
+
   }
 );
 
