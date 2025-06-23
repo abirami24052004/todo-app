@@ -3,6 +3,16 @@ import { User, Plus, Edit3, Trash2, CheckCircle, Circle, LogOut, Mail ,Facebook,
 import { authAPI, tasksAPI } from './services/api';
 
 import { useLocation, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+function App() {
+  return (
+    <BrowserRouter>   // 📦 This wraps your entire app and enables routing
+      <Routes>         // 📚 Think of this as the list of pages
+        <Route path="/auth/success" element={<AuthSuccessHandler />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 
 const AuthSuccessHandler = () => {
