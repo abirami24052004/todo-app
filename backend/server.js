@@ -57,3 +57,7 @@ app.listen(PORT, () => {
   console.log('- Facebook:', !!(process.env.FACEBOOK_APP_ID && process.env.FACEBOOK_APP_SECRET));
   console.log('- GitHub:', !!(process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET));
 });
+app.get("/", (req, res) => {
+  res.send("API is running ✅");
+});
+
