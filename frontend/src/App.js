@@ -17,6 +17,8 @@ const Login = ({ onLogin }) => {
       window.history.replaceState({}, document.title, window.location.pathname);
     }
   }, []);
+  <Route path="/auth/success" element={<AuthSuccessHandler />} />
+
   const AuthSuccessHandler = () => {
   const navigate = useNavigate();
   const location = useLocation();
