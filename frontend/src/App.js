@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { User, Plus, Edit3, Trash2, CheckCircle, Circle, LogOut, Mail ,Facebook, Github} from 'lucide-react';
 import { authAPI, tasksAPI } from './services/api';
 
-import { useLocation, useNavigate } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 
 
@@ -615,13 +614,7 @@ const Dashboard = ({ user, onLogout }) => {
 
 // Main App Component
 const App = () => {
-  return (
-    <BrowserRouter>   
-      <Routes>         
-        <Route path="/auth/success" element={<AuthSuccessHandler />} />
-      </Routes>
-    </BrowserRouter>
-  );
+
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
