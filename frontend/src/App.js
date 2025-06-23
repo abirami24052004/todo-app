@@ -616,8 +616,8 @@ const Dashboard = ({ user, onLogout }) => {
 // Main App Component
 const App = () => {
   return (
-    <BrowserRouter>   // 📦 This wraps your entire app and enables routing
-      <Routes>         // 📚 Think of this as the list of pages
+    <BrowserRouter>   
+      <Routes>         
         <Route path="/auth/success" element={<AuthSuccessHandler />} />
       </Routes>
     </BrowserRouter>
